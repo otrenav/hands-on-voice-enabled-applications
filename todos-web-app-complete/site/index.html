@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>To-Do's Web App</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <section id="login">
+        <div class="row">
+          <div class="col mt-5 mb-5">
+            <h2 class="bold">To-Dos Web App</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mt-5 mb-5">
+            <div class="form-group">
+              <label for="webAppUserID">Web App User ID</label>
+              <input type="text" class="form-control" id="webAppUserID">
+              <small id="webAppUserIDHelp" class="form-text text-muted">Four-digit number.</small>
+            </div>
+            <div class="align-right">
+              <button class="btn btn-primary" onclick="logIn()">
+                Log In
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="first-row">
+      </section>
+      <section id="lists">
+      </section>
+    </div>
+    <!-- Create List Modal -->
+    <div class="modal fade" id="createListModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create List</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                Name
+                <input type="text" id="inputList">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              data-dismiss="modal">
+              Close
+            </button>
+            <button type="button"
+              class="btn btn-primary"
+              onclick="createList()">
+              Create
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Create Item Modal -->
+    <div class="modal fade" id="createItemModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create Item</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col mb-2">
+                Name
+                <input type="text" id="inputItem">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                Date
+                <input type="date" id="inputDate">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary"
+              data-dismiss="modal">
+              Close
+            </button>
+            <button type="button"
+              class="btn btn-primary"
+              onclick="createItem()">
+              Create
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <script src="./main.js"></script>
+  </body>
+</html>

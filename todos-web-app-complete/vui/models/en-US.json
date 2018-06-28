@@ -1,0 +1,504 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "todos web app",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AddList",
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "samples": [
+                "The name for the to-dos list is {list}",
+                "The to-dos list is {list}",
+                "The to-dos list is called {list}",
+                "{list}",
+                "The name for the list is {list}",
+                "The list is {list}",
+                "The list is called {list}"
+              ]
+            }
+          ],
+          "samples": [
+            "add a to-dos list",
+            "add a list",
+            "add list",
+            "add list for {list}",
+            "add a list for {list}",
+            "add a to-dos list for {list}",
+            "add list called {list}",
+            "add a list called {list}",
+            "add a to-dos list called {list}",
+            "create a to-dos list",
+            "create a list",
+            "create list",
+            "create list for {list}",
+            "create a list for {list}",
+            "create a to-dos list for {list}",
+            "create list called {list}",
+            "create a list called {list}",
+            "create a to-dos list called {list}"
+          ]
+        },
+        {
+          "name": "DeleteList",
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "samples": [
+                "Delete {list}",
+                "Delete the {list} to-dos list",
+                "Delete the {list} list",
+                "I want to delete the {list} to-dos list",
+                "I want to delete the {list} list",
+                "Remove {list}",
+                "Remove the {list} to-dos list",
+                "Remove the {list} list",
+                "I want to remove the {list} to-dos list",
+                "I want to remove the {list} list",
+                "{list}"
+              ]
+            }
+          ],
+          "samples": [
+            "delete the {list} list",
+            "remove the {list} list"
+          ]
+        },
+        {
+          "name": "ReadLists",
+          "samples": [
+            "What lists do I have available",
+            "What are my To-Dos lists",
+            "Tell me what are my To-Dos lists",
+            "Tell me what To-Dos lists I have",
+            "Tell me what are my lists",
+            "Tell me what lists I have"
+          ]
+        },
+        {
+          "name": "AddItem",
+          "slots": [
+            {
+              "name": "list",
+              "type": "list"
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "Schedule it for {date}",
+                "{date}",
+                "For {date}"
+              ]
+            },
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{item}",
+                "Add {item}",
+                "I would like to add {item}"
+              ]
+            }
+          ],
+          "samples": [
+            "Add to-do",
+            "Add item",
+            "Add item to {list}",
+            "Add item to list",
+            "Add item to {list} to-dos list",
+            "Add item to {list} list",
+            "Add to-do for {date}",
+            "Add item for {date}",
+            "Add item to {list} for {date}",
+            "Add item to list for {date}",
+            "Add item to {list} to-dos list for {date}",
+            "Add item to {list} list for {date}",
+            "Create to-do",
+            "Create item",
+            "Create item to {list}",
+            "Create item to list",
+            "Create item to {list} to-dos list",
+            "Create item to {list} list",
+            "Create to-do for {date}",
+            "Create item for {date}",
+            "Create item to {list} for {date}",
+            "Create item to list for {date}",
+            "Create item to {list} to-dos list for {date}",
+            "Create item to {list} list for {date}"
+          ]
+        },
+        {
+          "name": "DeleteItem",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "list",
+              "type": "list",
+              "samples": [
+                "From to-dos list {list}",
+                "From the {list} to-dos list",
+                "From the {list} list",
+                "{list}",
+                "From {list}",
+                "From list {list}"
+              ]
+            }
+          ],
+          "samples": [
+            "Delete item number {number} from {list} list",
+            "Delete item number {number} from to-dos list {list}",
+            "Delete item number {number} from {list}",
+            "Delete item {number} from {list} list",
+            "Delete item {number} from to-dos list {list}",
+            "Delete item {number} from {list}",
+            "Delete to-do",
+            "Delete to-do {item}",
+            "Delete to-do number {number}",
+            "Delete item",
+            "Delete item {item}",
+            "Delete item number {number}"
+          ]
+        },
+        {
+          "name": "ReadItems",
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "samples": [
+                "{list}",
+                "From {list}",
+                "From the {list} to-dos list",
+                "From the {list} list"
+              ]
+            }
+          ],
+          "samples": [
+            "What items exist",
+            "What items are missing",
+            "What items are pending",
+            "What items do I have in the {list} to-dos list",
+            "What to-dos do I have in {list}",
+            "What items do I have in the {list} list",
+            "What items do I have in list {list}",
+            "What items do I have",
+            "What items I have"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "school",
+                "synonyms": [
+                  "uni",
+                  "university",
+                  "education"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "work",
+                "synonyms": [
+                  "boss",
+                  "job"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "home",
+                "synonyms": [
+                  "house"
+                ]
+              }
+            }
+          ],
+          "name": "list"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AddList",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.199674347877.255157547674"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DeleteList",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.93360334728"
+          },
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.93360334728.729447582715",
+                "elicitation": "Elicit.Slot.93360334728.729447582715"
+              }
+            }
+          ]
+        },
+        {
+          "name": "AddItem",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1315583882802"
+          },
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1315583882802.276109738062"
+              }
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1315583882802.201104143088"
+              }
+            },
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1315583882802.846594173989"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DeleteItem",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1324578851021"
+          },
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "item",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false
+            },
+            {
+              "name": "list",
+              "type": "list",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1324578851021.329904141448"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ReadItems",
+          "confirmationRequired": false,
+          "slots": [
+            {
+              "name": "list",
+              "type": "list",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1336304959330.697930923082"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.199674347877.255157547674",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What should the list be called?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What should this to-dos list be called?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What should it be called?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.93360334728.729447582715",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What's the name of the list you want to delete?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What list do you want to delete?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.93360334728.729447582715",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I head {list} . Is that right?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.93360334728",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The contents of the {list} list will be deleted as well. Are you sure you want to proceed?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1315583882802.846594173989",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What do you want to add?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What item would you like to add?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What's the item?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1315583882802.201104143088",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "For when?"
+          },
+          {
+            "type": "PlainText",
+            "value": "When is this due?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1315583882802.276109738062",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "To what list?"
+          },
+          {
+            "type": "PlainText",
+            "value": "To what list would you like to add {item} ?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1315583882802",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "So, you want to add {item} for {date} to the {list} list. Is that right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1324578851021.329904141448",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "From what list would you like to delete item number {number} ?"
+          },
+          {
+            "type": "PlainText",
+            "value": "From what list?"
+          },
+          {
+            "type": "PlainText",
+            "value": "From what list woud you like to delete {item} ?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1324578851021",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The {item} list from the {list} list will be deleted. Is that right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1336304959330.697930923082",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "From what list woud you like to know your to-dos?"
+          }
+        ]
+      }
+    ]
+  }
+}

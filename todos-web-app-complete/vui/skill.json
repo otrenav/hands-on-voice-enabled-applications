@@ -1,0 +1,31 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "To-Dos Voice-Enabled Web Application",
+          "examplePhrases": [
+            "Alexa open todos web app",
+            "Alexa tell todos web app voice application",
+            "Alexa ask todos web app to create a new list"
+          ],
+          "name": "To-Dos Web App",
+          "description": "To-Dos Web App"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:039074912716:function:ask-custom-ToDos-Web-App-default"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

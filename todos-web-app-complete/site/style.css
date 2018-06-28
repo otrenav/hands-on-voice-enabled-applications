@@ -1,0 +1,58 @@
+
+html, body {
+  font-size: 1.3em;
+  color: #555555;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bg-light-blue {
+  background-color: #e2f1fb;
+}
+
+.shadow {
+  box-shadow: 7px 7px 40px grey;
+}
+
+.date {
+  color: #7fa3c3;
+}
+
+.trash {
+  cursor: pointer;
+  text-align: right;
+}
+
+.trash-list {
+  font-size: 1.5em;
+  color: #a0d2ff;
+}
+
+.trash-item {
+  font-size: 1.2em;
+  color: #a3c0d9;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.create-button {
+  box-shadow: 5px 5px 40px grey !important;
+}
+
+.info {
+  font-weight: bold;
+  font-size: 0.7em;
+  color: #AAAAAA;
+}
+
+small {
+  font-size: 0.5em;
+}
+
+input[type=text], input[type=date] {
+  width: 100%;
+}
